@@ -6,11 +6,11 @@
   "apiEndpoints": {
 
     "api": {
-      "host": "*",
+      "host": "*", #localhost - poner "*" cuando se va a desplegar a produccion
       "paths": '/ip'
     },
     "inventario": {
-      "host": ${HOST:-"localhost"},
+      "host": "*", #localhost - poner "*" cuando se va a desplegar a produccion
       "paths": "/api_inventario/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
