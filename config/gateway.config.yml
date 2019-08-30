@@ -118,7 +118,8 @@
       "proxy": [
       {
         "action": {
-          "serviceEndpoint": "api"
+          "serviceEndpoint": "api",
+            changeOrigin: true
         }
       }
       ]
