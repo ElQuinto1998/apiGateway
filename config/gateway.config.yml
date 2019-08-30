@@ -1,0 +1,101 @@
+{
+  "http": {
+    "port": 8090
+  },
+  "admin": {
+    "port": 9876,
+    "hostname": "localhost"
+  },
+  "apiEndpoints": {
+
+    "inventario": {
+      "host": "localhost",
+      "paths": "/api_inventario/*"
+    },
+    "tienda": {
+      "host": "localhost",
+      "paths":  "/api_tienda/*"
+    },
+    "administracion": {
+      "host": "localhost",
+      "paths":  "/api_administracion/*"
+    }
+
+  },
+  "serviceEndpoints": {
+
+    "inventario": {
+      "url": "http://localhost:8000"
+    },
+    "tienda": {
+      "url": "http://localhost:8001"
+    },
+    "administracion": {
+      "url": "http://localhost:8002"
+    }
+
+  },
+  "policies": [
+    "basic-auth",
+    "key-auth",
+    "cors",
+    "expression",
+    "log",
+    "oauth2",
+    "proxy",
+    "rate-limit"
+  ],
+  "pipelines": [
+  {
+    "name": "default",
+    "apiEndpoints": [
+      "inventario"
+    ],
+    "policies": [
+    {
+      "proxy": [
+      {
+        "action": {
+          "serviceEndpoint": "inventario"
+        }
+      }
+      ]
+    }
+    ]
+  },
+  {
+    "name": "default-1",
+    "apiEndpoints": [
+      "tienda"
+    ],
+    "policies": [
+    {
+      "proxy": [
+      {
+        "action": {
+          "serviceEndpoint": "tienda"
+        }
+      }
+      ]
+    }
+    ]
+  },
+  {
+    "name": "default-2",
+    "apiEndpoints": [
+      "administracion"
+    ],
+    "policies": [
+    {
+      "proxy": [
+      {
+        "action": {
+          "serviceEndpoint": "administracion"
+        }
+      }
+      ]
+    }
+    ]
+  }
+  ]
+}
