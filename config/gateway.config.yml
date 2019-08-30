@@ -4,12 +4,12 @@
   },
   "admin": {
     "port": 9876,
-    "hostname": "localhost"
+    "hostname": ${HOST:-"localhost"}
   },
   "apiEndpoints": {
 
     "inventario": {
-      "host": "https://apigatewaytds.herokuapp.com",
+      "host": ${HOST:-"localhost"},
       "paths": "/api_inventario/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
