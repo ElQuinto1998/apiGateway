@@ -1,6 +1,6 @@
 {
   "http": {
-    "port": 8090
+    "port": ${HTTP_PORT:-8090}
   },
   "admin": {
     "port": 9876,
@@ -10,15 +10,18 @@
 
     "inventario": {
       "host": "localhost",
-      "paths": "/api_inventario/*"
+      "paths": "/api_inventario/*",
+      "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
     "tienda": {
       "host": "localhost",
-      "paths":  "/api_tienda/*"
+      "paths":  "/api_tienda/*",
+      "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
     "administracion": {
       "host": "localhost",
-      "paths":  "/api_administracion/*"
+      "paths":  "/api_administracion/*",
+      "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     }
 
   },
