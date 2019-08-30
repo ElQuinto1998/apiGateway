@@ -9,7 +9,7 @@
   "apiEndpoints": {
 
     "api": {
-      "host": ${HOST:-"localhost"},
+      "host": ${HOSTNAME:-"localhost"},
       "paths": '/ip'
     },
     "inventario": {
