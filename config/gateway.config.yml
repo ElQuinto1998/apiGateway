@@ -9,7 +9,7 @@
   "apiEndpoints": {
 
     "inventario": {
-      "host": ${HOST:-"localhost"},
+      "host": "https://apigatewaytds.herokuapp.com",
       "paths": "/api_inventario/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
