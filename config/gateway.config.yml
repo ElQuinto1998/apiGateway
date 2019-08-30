@@ -8,6 +8,10 @@
   },
   "apiEndpoints": {
 
+    "api": {
+      "host": ${HOST:-"localhost"},
+      "paths": '/ip'
+    },
     "inventario": {
       "host": ${HOST:-"localhost"},
       "paths": "/api_inventario/*",
@@ -26,6 +30,10 @@
 
   },
   "serviceEndpoints": {
+
+    "api": {
+      "url": "https://httpbin.org"
+    },
 
     "inventario": {
       "url": "http://localhost:8000"
@@ -94,6 +102,23 @@
       {
         "action": {
           "serviceEndpoint": "administracion"
+        }
+      }
+      ]
+    }
+    ]
+  },
+  {
+    "name": "default-3",
+    "apiEndpoints": [
+      "api"
+    ],
+    "policies": [
+    {
+      "proxy": [
+      {
+        "action": {
+          "serviceEndpoint": "api"
         }
       }
       ]
