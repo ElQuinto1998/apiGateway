@@ -2,7 +2,7 @@
   "name": "apiGateway",
   "description": "Express Gateway Instance Bootstraped from Command Line",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {},
   "license": "UNLICENSED",
