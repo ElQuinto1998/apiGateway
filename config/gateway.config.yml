@@ -9,7 +9,7 @@
   "apiEndpoints": {
 
     "inventario": {
-      "host": "localhost",
+      "host": ${HOST:-"localhost"},
       "paths": "/api_inventario/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
