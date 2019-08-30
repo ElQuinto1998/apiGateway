@@ -2,10 +2,7 @@
   "http": {
     "port": ${PORT:-8090}
   },
-  "admin": {
-    "port": 9876,
-    "hostname": ${HOST:-"localhost"}
-  },
+
   "apiEndpoints": {
 
     "api": {
@@ -119,7 +116,7 @@
       {
         "action": {
           "serviceEndpoint": "api",
-            changeOrigin: true
+          "changeOrigin": true
         }
       }
       ]
