@@ -6,7 +6,7 @@
   "apiEndpoints": {
 
     "api": {
-      "host": ${HOSTNAME:-"localhost"},
+      "host": "*",
       "paths": '/ip'
     },
     "inventario": {
