@@ -15,12 +15,12 @@
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
     "tienda": {
-      "host": "localhost",
+      "host": "*",
       "paths":  "/api_tienda/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     },
     "administracion": {
-      "host": "localhost",
+      "host": "*",
       "paths":  "/api_administracion/*",
       "methods": ["GET", "PUT", "POST", "PATCH", "DELETE"]
     }
@@ -33,7 +33,7 @@
     },
 
     "inventario": {
-      "url": "http://localhost:8000"
+      "url": "http://127.0.0.1:8000"
     },
     "tienda": {
       "url": "http://localhost:8001"
