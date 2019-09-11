@@ -33,7 +33,7 @@
     },
 
     "inventario": {
-      "url": "http://127.0.0.1:8000"
+      "url": "https://msinventario.herokuapp.com"
     },
     "tienda": {
       "url": "http://localhost:8001"
