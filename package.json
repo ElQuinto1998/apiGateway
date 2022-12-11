@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-gateway": "^1.16.7",
     "path": "^0.12.7",
     "zipkin": "^0.19.0",
